@@ -1,0 +1,149 @@
+:root {
+  --corPrimaria: #181818;
+  --corSecundaria: #0066ff;
+  --corTerciaria: #c2c2c2;
+  --corTexto: #ffffff;
+}
+
+.sliderDiv {
+  position: absolute;
+
+  width: 100%;
+  height: 40px;
+
+  z-index: 1;
+  .slider {
+    width: 100%;
+
+    appearance: none;
+
+    background-color: #414141;
+  }
+  .slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+
+    border-radius: 100%;
+
+    background: var(--corSecundaria);
+    cursor: pointer;
+  }
+  p {
+    color: white;
+
+    font-weight: 900;
+
+    margin-left: 10px;
+  }
+}
+.item2 {
+  top: 50px;
+}
+.container {
+  position: absolute;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--corPrimaria);
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 0;
+  .btn-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+
+    transition: 0.3s;
+    .after {
+      position: absolute;
+  
+      width: 540px;
+      height: 140px;
+  
+      border-radius: 200px;
+
+      background-color: rgba(255, 255, 255, 0.1);
+
+      transform: translateZ(-60px);
+  
+      border: 3px solid var(--corSecundaria);
+
+      transition: 1s ease-in-out;
+
+      cursor: pointer;
+    }
+    .middle {
+      position: absolute;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      font-size: 50px;
+      color: white;
+
+      background-color: rgba(255, 255, 255, 0.3);
+  
+      width: 620px;
+      height: 220px;
+  
+      border-radius: 200px;
+  
+      border: 3px solid var(--corSecundaria);
+
+      overflow: hidden;
+
+      transition: 1s ease-in-out;
+
+      cursor: pointer;
+    }
+    .middle::before {
+      content: "";
+      position: absolute;
+
+      width: 0px;
+      height: 100%;
+
+      left: -100%;
+
+      background-color: white;
+
+      transition: 1s ease-in-out;
+
+      z-index: -1;
+    }
+    .middle:hover::before {
+      left: 0;
+      width: 100%;
+    }
+    .middle:hover {
+      color: var(--corSecundaria);
+    }
+    .before {
+      position: absolute;
+  
+      width: 540px;
+      height: 140px;
+  
+      border-radius: 200px;
+
+      background-color: rgba(255, 255, 255, 0.1);
+
+      transform: translateZ(60px);
+  
+      border: 3px solid var(--corSecundaria);
+
+      transition: 1s ease-in-out;
+
+      cursor: pointer;
+    }
+  }
+}
